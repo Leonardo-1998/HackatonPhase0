@@ -1,22 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title></title>
-        <link href="css/index.css" rel="stylesheet">
-    </head>
-    <body>
 
-        <input type="text" placeholder="Judul Lagu" id="judulLagu">
-        <input type="text" placeholder="Artis" id="artis">
-        <input type="text" placeholder="Link" id="link">
-        <button onclick="submit()">Submit</button>
-        
-        <script src="data/dummyData.js"></script>
-        <script src="index.js"></script>
-        <!-- <script>
-            for(let i = 0 ; i < data.length
-            )
-        </script> -->
+<head>
+    <title></title>
+    <link href="css/index.css" rel="stylesheet">
+</head>
 
-    </body>
+<body onload="loadBody()">
+    <!-- onload => Event yang jalan ketika diload / page dibuka -->
+
+    <input type="text" placeholder="Judul Lagu" id="judulLagu">
+    <input type="text" placeholder="Artis" id="artis">
+    <input type="text" placeholder="Link" id="link">
+    <button onclick="submit()">Submit</button>
+
+    <table id="myTable" border="1">
+        <thead>
+            <tr>
+                <th>
+                    No.
+                </th>
+                <th>
+                    Judul Lagu
+                </th>
+                <th>
+                    Artis
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+
+        </tbody>
+
+    </table>
+
+    <!-- <script src="data/dummyData.js"></script> -->
+    <script src="index.js"></script>
+
+</body>
+
 </html>
