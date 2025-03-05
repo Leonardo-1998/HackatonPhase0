@@ -2,30 +2,37 @@
 <html lang="en">
 
 <head>
-    <title></title>
+    <title>Personalized Music Playlist</title>
     <link href="css/index.css" rel="stylesheet">
+    <link rel="icon" href="logoplaylist.png"> 
 </head>
 
 <body onload="loadBody()">
+    <body style="background-color: #f7f2ed"></body>
     <!-- onload="loadBody()" -->
     <!-- onload => Event yang jalan ketika diload / page dibuka -->
-
-    <input type="text" placeholder="Judul Lagu" id="judulLagu">
-    <input type="text" placeholder="Artis" id="artis">
+    <div></div>
+    <h1 class="header">Your Personalized Music Playlist</h1>
+    <h2 class="add-new-song">Add New Song!</h2>
+    <input type="text" placeholder="Title" id="judulLagu">
+    <br>
+    <input type="text" placeholder="Artist" id="artis">
+    <br>
     <input type="text" placeholder="Link" id="link">
-    <button onclick="submit()">Submit</button>
+    <br>
+    <button class="button-click" onclick="submit()">Submit</button>
 
-    <table id="myTable" border="1">
+    <table id="myTable" align="center">
         <thead>
             <tr>
                 <th>
                     No.
                 </th>
                 <th>
-                    Judul Lagu
+                    Title
                 </th>
                 <th>
-                    Artis
+                    Artist
                 </th>
                 <th>
                     Action

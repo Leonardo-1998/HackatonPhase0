@@ -161,10 +161,10 @@ function loadBody(){
     for (let { judulLagu, artis, link, id } of data) {
         tableBody.innerHTML += `
             <tr>
-                <td>${id+1}</td>
+                <td style="text-align:center">${id+1}</td>
                 <td>${judulLagu}</td>
                 <td>${artis}</td>
-                <td>
+                <td style="text-align:center">
                     <button onclick="edit(${id})">Edit</button>
                     <button onclick="remove(${id})">Delete</button>
                     <a target="_blank" href="${link}">
