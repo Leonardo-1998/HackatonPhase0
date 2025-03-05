@@ -1,0 +1,61 @@
+.header {
+    font-family: Verdana;
+    font-weight: bold;
+    text-align: center;
+    color: #1d242e;
+    
+}
+
+.add-new-song {
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: left;
+    color: #1d242e;
+    
+}
+
+#judulLagu,
+#artis, 
+#link {
+    background-color: #7fc649;
+    color: #ffff;
+    font-family: Verdana;
+    border-collapse: collapse;
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #f7f2ed;
+}
+#link {
+    margin-bottom: 10px;
+}
+
+.button-click {
+    width: 322px;
+    height: 40px;
+}
+
+
+.background {
+    background-color: #f7f2ed;
+}
+
+#myTable {
+    width: 50%;
+    background-color: #1d242e;
+    color: #ffff;
+    font-family: Verdana;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid;
+    border: 1px solid #f7f2ed;
+}
+
+
+#tableBody {
+    background-color: #7fc649;
+}
