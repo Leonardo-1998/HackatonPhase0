@@ -1,4 +1,6 @@
 // let name = prompt("Please enter your name")
+let edited = false;
+let idOfEditedData;
 
 let data = [
     {
@@ -87,8 +89,17 @@ function submit() {
         link: link.value,
         id: data.length
     }
-    // Mempush data yang diambil kedalam array of object
-    data.push(objectOfPlaylist)
+
+    if(edited){
+        data[idOfEditedData].judulLagu =judulLagu.value;
+        data[idOfEditedData].artis = artis.value;
+        data[idOfEditedData].link = link.value;
+        edited = false;
+        idOfEditedData
+    } else {
+        // Mempush data yang diambil kedalam array of object
+        data.push(objectOfPlaylist)
+    }
 
     // Mengecek nilai data
     console.log(data)
@@ -101,26 +112,37 @@ function submit() {
     loadBody()
 }
 
+// Terdapat bug pada Edit ini
 function edit(editId) {
+    // Mengambil element
     let editJudulLagu = document.getElementById("judulLagu")
     let editArtis = document.getElementById("artis")
     let editLink = document.getElementById("link")
+
+    // Mengecek element
     console.log(judulLagu)
     console.log(artis)
     console.log(link)
 
+    // Mencari data yang sesuai dengan Id nya yang di cari
     let filter = data.filter((lagu) => lagu.id === editId)
     editJudulLagu.value = filter[0].judulLagu
     editArtis.value = filter[0].artis
     editLink.value = filter[0].link
 
-    remove(filter[0].id)
+    // Flagging
+    edited = true;
+    idOfEditedData = editId;
+    // loadBody()
 }
 
 function remove(deleteId) {
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+    // Mencari data yang memiliki id berbeda dengan deleteId
     data = data.filter((lagu) => {
         return lagu.id !== deleteId
     })
+    // Mengatur ulang id yang ada pada data
     for (let i = 0; i < data.length; i++) {
         // console.log(data[i])
         data[i].id = i;
@@ -129,21 +151,79 @@ function remove(deleteId) {
     loadBody()
 }
 
-function loadBody() {
-    let body = document.getElementById("tableBody")
-    body.innerHTML = ""
+function loadBody(){
+    // Mnengambil elemen data dengan id #tableBody
+    let tableBody = document.getElementById("tableBody")
+    // Mengosongkan dulu isi dari html id #tableBody
+    tableBody.innerHTML = ""
 
+    // Untuk setiap {judulLagu, artis, link, id} dari setiap data diambil
     for (let { judulLagu, artis, link, id } of data) {
-        body.innerHTML += `
-            <tr> 
-                <td>${id + 1}</td>
+        tableBody.innerHTML += `
+            <tr>
+                <td>${id+1}</td>
                 <td>${judulLagu}</td>
                 <td>${artis}</td>
                 <td>
                     <button onclick="edit(${id})">Edit</button>
                     <button onclick="remove(${id})">Delete</button>
-                    <button> <a target="_blank" href="${link}">Play</a></button>
+                    <a target="_blank" href="${link}">
+                        <button>Play</button>
+                    </a>    
                 </td>
-            </tr>`
+            </tr>
+        `
     }
 }
+
+// function loadBody() {
+//     // Mnengambil elemen data dengan id #tableBody
+//     let tableBody = document.getElementById("tableBody")
+//     // Mengosongkan dulu isi dari html id #tableBody
+//     tableBody.innerHTML = ""
+
+//     // Untuk setiap {judulLagu, artis, link, id} dari setiap data diambil
+//     for (let { judulLagu, artis, link, id } of data) {
+//         // Menambahkan isi tag element html pada id #tableBody dengan 
+//         // console.log(id)
+//         // console.log(judulLagu)
+//         let row = document.createElement("tr");
+        
+//         let idCell = document.createElement("td");
+//         idCell.textContent = id+1;
+//         row.appendChild(idCell);
+        
+//         let judulLaguCell = document.createElement("td");
+//         judulLaguCell.textContent = judulLagu;
+//         row.appendChild(judulLaguCell);
+
+//         let artisCell = document.createElement("td");
+//         artisCell.textContent = artis;
+//         row.appendChild(artisCell)
+
+//         let buttonElement = document.createElement("td");
+
+//         let editButton = document.createElement("button");
+//         editButton.textContent = "Edit";
+//         editButton.addEventListener("click",()=>edit(id));
+//         buttonElement.appendChild(editButton);
+
+//         let deleteButton = document.createElement("button");
+//         deleteButton.textContent = "Delete";
+//         deleteButton.addEventListener("click", () => remove(id));
+//         buttonElement.appendChild(deleteButton)
+
+//         let playButton = document.createElement("button");
+//         let playLink = document.createElement("a");
+//         playButton.textContent = "Play";
+//         playLink.target = "_blank";
+//         playLink.href = link;
+//         playLink.appendChild(playButton)
+//         buttonElement.appendChild(playLink)
+
+//         row.appendChild(buttonElement)
+
+//         tableBody.appendChild(row)
+//     }
+// }
+
