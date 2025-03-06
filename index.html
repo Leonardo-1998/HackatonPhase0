@@ -4,17 +4,17 @@
 <head>
     <title>Personalized Music Playlist</title>
     <link href="css/index.css" rel="stylesheet">
-    <link rel="icon" href="logoplaylist.png"> 
+    <link rel="icon" href="logoplaylistnew.png"> 
 </head>
 
-<body onload="loadBody()">
-    <body style="background-color: #f7f2ed"></body>
+<body style="background-color: #1f1f1f" onload="loadBody()">
+    <p id="Hello"></p>
     <!-- onload="loadBody()" -->
     <!-- onload => Event yang jalan ketika diload / page dibuka -->
     <h1 class="header">Your Personalized Music Playlist</h1>
      <div class="container">
         <div class="add-new-song">
-            <h2 align="center">Add New Song!</h2>
+            <h2 class="add-new-song"align="center">Add New Song!</h2>
             <div class="input-title">
                 <input type="text" placeholder="Title" id="judulLagu">
             </div>
@@ -51,15 +51,13 @@
             </table>
         </div>
      </div>
-   
-   
-  
-
-    
 
     <!-- <script src="data/dummyData.js"></script> -->
     <script src="index.js"></script>
-
+    
+    <footer>
+        <p class="footer" align="center">&copy 2025 copyright reserved</p>
+    </footer>
 </body>
 
 </html>
