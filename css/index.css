@@ -37,16 +37,16 @@
     font-family: sans-serif;
     text-align: right;
     color: #f7f2ed;
+    margin-right: 30px;
+    border-style: solid;
+    padding: 12px;
+    border-radius: 30px;
+    width: fit-content;
 }
 
 hr {
     color: #7fc649;
 }
-
-
-/* .header {
-
-} */
 
 .container {
     display: flex;
@@ -60,7 +60,7 @@ hr {
     font-size: 20px;
     text-align: left;
     color: #f7f2ed;
-    margin-left: 40px;
+    margin-left: 10px;
     margin-top: -5px;
 }
 
