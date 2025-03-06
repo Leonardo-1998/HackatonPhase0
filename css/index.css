@@ -26,8 +26,11 @@
     font-family: kanit;
     font-size: 40px;
     color: #f7f2ed;
-    margin-left: 80px;
-    margin-top: -20px;
+    margin: 0px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    /* margin-left: 80px;
+    margin-top: -20px; */
 }
 
 #Hello {
@@ -43,10 +46,6 @@
 
 hr {
     color: #7fc649;
-}
-
-.header {
-
 }
 
 .container {
@@ -154,6 +153,28 @@ th {
     background-color: #1f1f1f;
 }
 
+.deleteImage{
+    height: 19px;
+    width: 19px;
+    margin: auto;
+}
+
+.dataButton button{
+    width: 37px;
+    height: 35px;
+}
+
+.playImage{
+    height: 19px;
+    width: 19px;
+    align-items: center;
+}
+
+.editImage{
+    height: 19px;
+    width: 19px;
+}
+
 .footer {
     font-size: 12px;
     font-family: Verdana;
@@ -164,4 +185,15 @@ th {
 
 hr.new1 {
     border-color: #7fc649;
+}
+
+#navigation{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navLogo{
+    display: flex;
+    margin-left: 50px;
+    margin-top: 10px;
 }
