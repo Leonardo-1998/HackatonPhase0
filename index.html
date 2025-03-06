@@ -11,39 +11,47 @@
     <p id="Hello"></p>
     <!-- onload="loadBody()" -->
     <!-- onload => Event yang jalan ketika diload / page dibuka -->
-    <div></div>
     <h1 class="header">Your Personalized Music Playlist</h1>
-    <h2 class="add-new-song">Add to Playlist:</h2>
-    <input type="text" placeholder="Title" id="judulLagu">
-    <br>
-    <input type="text" placeholder="Artist" id="artis">
-    <br>
-    <input type="text" placeholder="Link" id="link">
-    <br>
-    <button class="button-click" onclick="submit()">Submit</button>
-
-    <table id="myTable" align="center">
-        <thead>
-            <tr>
-                <th>
-                    #
-                </th>
-                <th>
-                    Title
-                </th>
-                <th>
-                    Artist
-                </th>
-                <th>
-                    Action
-                </th>
-            </tr>
-        </thead>
-        <tbody id="tableBody">
-        </tbody>
+     <div class="container">
+        <div class="add-new-song">
+            <h2 class="add-new-song"align="center">Add New Song!</h2>
+            <div class="input-title">
+                <input type="text" placeholder="Title" id="judulLagu">
+            </div>
+            <div class="input-title">
+                <input type="text" placeholder="Artist" id="artis">
+            </div>
+            <div class="input-title">
+                <input type="text" placeholder="Link" id="link">
+            </div>
+            <button class="button-click" onclick="submit()">Submit</button>
+        </div>
+        <div>
+            <table id="myTable" align="center">
+                <thead>
+                    <tr>
+                        <th>
+                            No.
+                        </th>
+                        <th>
+                            Title
+                        </th>
+                        <th>
+                            Artist
+                        </th>
+                        <th>
+                            Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
         
-    </table>
-    
+                </tbody>
+        
+            </table>
+        </div>
+     </div>
+
     <!-- <script src="data/dummyData.js"></script> -->
     <script src="index.js"></script>
     
