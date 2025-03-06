@@ -6,14 +6,28 @@
     
 }
 
+.container {
+    display: flex;
+    gap: 20px;
+    margin-top: 130px;
+}
+
 .add-new-song {
     font-family: Verdana;
     font-weight: bold;
     font-size: 20px;
     text-align: left;
     color: #1d242e;
+
     
 }
+
+.input-title{
+    width: 100px;
+    height: 50px;
+   
+}
+
 
 #judulLagu,
 #artis, 
@@ -22,17 +36,26 @@
     color: #ffff;
     font-family: Verdana;
     border-collapse: collapse;
-    width: 300px;
-    padding: 10px;
+    width: 285px;
+    padding: 12px;
     border: 1px solid #f7f2ed;
+    border-radius: 40px;
 }
 #link {
     margin-bottom: 10px;
 }
 
 .button-click {
-    width: 322px;
+    width: 310px;
     height: 40px;
+    border-radius: 40px;
+    background-color: #7fc649;
+    color: #ffff;
+
+}
+
+input::placeholder {
+    color: #1d242e;
 }
 
 
@@ -41,7 +64,7 @@
 }
 
 #myTable {
-    width: 50%;
+    width: 1010px;
     background-color: #1d242e;
     color: #ffff;
     font-family: Verdana;
@@ -50,7 +73,7 @@
 
 th, td {
     padding: 10px;
-    text-align: left;
+    text-align: center;
     border-bottom: 1px solid;
     border: 1px solid #f7f2ed;
 }
