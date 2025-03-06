@@ -26,8 +26,11 @@
     font-family: kanit;
     font-size: 40px;
     color: #f7f2ed;
-    margin-left: 80px;
-    margin-top: -20px;
+    margin: 0px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    /* margin-left: 80px;
+    margin-top: -20px; */
 }
 
 #Hello {
@@ -41,9 +44,9 @@ hr {
 }
 
 
-.header {
+/* .header {
 
-}
+} */
 
 .container {
     display: flex;
@@ -182,4 +185,15 @@ th {
 
 hr.new1 {
     border-color: #7fc649;
+}
+
+#navigation{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navLogo{
+    display: flex;
+    margin-left: 50px;
+    margin-top: 10px;
 }
