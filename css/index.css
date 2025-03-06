@@ -1,23 +1,48 @@
 .title {
-
-}
-
-#Hello {
-    font-family: Verdana;
-    font-weight: bold;
-    text-align: right;
-}
-
-
-.header {
     font-family: Verdana;
     font-weight: bold;
     text-align: center;
-    color: #1d242e;
+    color: #e0e0e0;
     width: 100%;
     height: 100px;
     display: block;
     border-radius: 25px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: -10px;
+    padding-left: 0%;
+    padding-right: 10%;
+}
+
+.img {
+    margin-top: 0;
+}
+
+.logo {
+    font-family: kanit;
+    font-size: 40px;
+    color: #f7f2ed;
+    margin-left: 80px;
+    margin-top: -20px;
+}
+
+#Hello {
+    font-family: sans-serif;
+    text-align: right;
+    color: #f7f2ed;
+}
+
+hr {
+    color: #7fc649;
+}
+
+
+.header {
+
 }
 
 .container {
@@ -31,13 +56,14 @@
     font-weight: bold;
     font-size: 20px;
     text-align: left;
-    color: #1d242e;
+    color: #f7f2ed;
+    margin-left: 40px;
+    margin-top: -5px;
 }
 
 .input-title{
     width: 100px;
     height: 50px;
-   
 }
 
 
@@ -45,13 +71,14 @@
 #artis, 
 #link {
     background-color: #7fc649;
-    color: #1d242e;
+    color: #1f1f1f;
     font-family: Verdana;
     border-collapse: collapse;
     width: 285px;
     padding: 12px;
     border: 1px solid #f7f2ed;
     border-radius: 40px;
+    margin-right: 20px;
 }
 
 #link {
@@ -65,13 +92,13 @@
     font-weight: bold;
     font-size: 14px;
     border-radius: 40px;
-    background-color: #7fc649;
+    background-color: #443dff;
     color: #ffff;
 
 }
 
 input::placeholder {
-    color: #1d242e;
+    color: #1f1f1f;
 }
 
 
@@ -80,31 +107,47 @@ input::placeholder {
 }
 
 #myTable {
-    width: 1010px;
-    background-color: #1d242e;
+    /* width: 1010px; */
+    background-color: #7fc649;
     color: #ffff;
     font-family: Verdana;
     border-collapse: collapse;
-    border-radius: 30px
+    border-radius: 20px;
+    border: dotted;
+    width: 150%;
+    margin-left: 70px;
+    margin-bottom: 200px;
+
+    overflow: hidden;
+    /* border-radius: 10px */
+}
+
+#myTable tbody tr:hover {
+    background-color: #443dff;
+    opacity: 100%;
 }
 
 td {
     padding: 10px;
     font-size: 15px;
-    text-align: center;
+    text-align: left;
     border-bottom: 1px solid;
-    border: 1px solid #f7f2ed;
+    border-collapse: collapse;
+    border: 1px solid #7fc649;
+    overflow: hidden;
 }
 
 th {
-    padding: 10px;
+    padding: 20px;
     text-align: center;
     border-bottom: 1px solid;
-    border: 1px solid #f7f2ed;
+    border-collapse: collapse;
+    border: 1px solid #7fc649;
+    overflow: hidden;
 }
 
 #tableBody {
-    background-color: #7fc649;
+    background-color: #1f1f1f;
 }
 
 .deleteImage{
@@ -134,5 +177,9 @@ th {
     font-family: Verdana;
     font-weight: italic;
     text-align: center;
-    color: #1d242e;
+    color: #f7f2ed;
+}
+
+hr.new1 {
+    border-color: #7fc649;
 }
