@@ -1,4 +1,6 @@
-// let name = prompt("Please enter your name")
+let username = prompt("Please enter your name")
+let user = document.getElementById("Hello")
+user.innerText = `Hello, ${username? username: "Stranger"}!`
 let edited = false;
 let idOfEditedData;
 
