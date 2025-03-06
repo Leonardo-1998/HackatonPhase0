@@ -1,9 +1,23 @@
+.title {
+
+}
+
+#Hello {
+    font-family: Verdana;
+    font-weight: bold;
+    text-align: right;
+}
+
+
 .header {
     font-family: Verdana;
     font-weight: bold;
     text-align: center;
     color: #1d242e;
-    
+    width: 100%;
+    height: 100px;
+    display: block;
+    border-radius: 25px;
 }
 
 .add-new-song {
@@ -12,20 +26,21 @@
     font-size: 20px;
     text-align: left;
     color: #1d242e;
-    
 }
 
 #judulLagu,
 #artis, 
 #link {
     background-color: #7fc649;
-    color: #ffff;
+    color: #1d242e;
     font-family: Verdana;
     border-collapse: collapse;
     width: 300px;
     padding: 10px;
     border: 1px solid #f7f2ed;
+    border-radius: 4px
 }
+
 #link {
     margin-bottom: 10px;
 }
@@ -33,11 +48,12 @@
 .button-click {
     width: 322px;
     height: 40px;
-}
-
-
-.background {
-    background-color: #f7f2ed;
+    background-color: #1d242e;
+    color: #f7f2ed;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 4px
 }
 
 #myTable {
@@ -46,16 +62,32 @@
     color: #ffff;
     font-family: Verdana;
     border-collapse: collapse;
+    border-radius: 30px
 }
 
-th, td {
+td {
     padding: 10px;
     text-align: left;
+    font-size: 15px;
     border-bottom: 1px solid;
     border: 1px solid #f7f2ed;
 }
 
+th {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid;
+    border: 1px solid #f7f2ed;
+}
 
 #tableBody {
     background-color: #7fc649;
+}
+
+.footer {
+    font-size: 12px;
+    font-family: Verdana;
+    font-weight: italic;
+    text-align: center;
+    color: #1d242e;
 }
