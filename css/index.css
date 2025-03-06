@@ -82,3 +82,25 @@ th, td {
 #tableBody {
     background-color: #7fc649;
 }
+
+.deleteImage{
+    height: 19px;
+    width: 19px;
+    margin: auto;
+}
+
+.dataButton button{
+    width: 37px;
+    height: 35px;
+}
+
+.playImage{
+    height: 19px;
+    width: 19px;
+    align-items: center;
+}
+
+.editImage{
+    height: 19px;
+    width: 19px;
+}

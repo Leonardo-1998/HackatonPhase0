@@ -164,11 +164,11 @@ function loadBody(){
                 <td style="text-align:center">${id+1}</td>
                 <td>${judulLagu}</td>
                 <td>${artis}</td>
-                <td style="text-align:center">
-                    <button onclick="edit(${id})">Edit</button>
-                    <button onclick="remove(${id})">Delete</button>
+                <td style="text-align:center" class="dataButton">
+                    <button onclick="edit(${id})"><img src="edit icon.png" alt="Edit" class="editImage"></button>
+                    <button onclick="remove(${id})"><img src="delete icon.png" alt="Delete" class="deleteImage"></button>
                     <a target="_blank" href="${link}">
-                        <button>Play</button>
+                        <button><img src="play icon.png" alt="Play" class="playImage"></button>
                     </a>    
                 </td>
             </tr>
